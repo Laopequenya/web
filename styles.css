@@ -1,0 +1,143 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Encabezado */
+header {
+    background: rgb(199, 71, 71);
+    padding: 20px;
+    text-align: center;
+}
+
+header img {
+    max-height: 100px;
+    width: auto;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 80px);
+}
+
+/* Barras laterales */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 33.33%;
+    transition: background-image 0.5s ease-in-out;
+    background-size: cover;
+    background-position: center bottom;
+    position: relative;
+}
+
+/* División izquierda */
+#left-sidebar {
+    background-image: url('fondo_izquierdo.png');
+}
+
+/* División derecha */
+#right-sidebar {
+    background-image: url('fondo_derecha.png');
+}
+
+/* Cambia la imagen cuando el menú está abierto */
+#left-sidebar.open-left {
+    background-image: url('fondo_izquierdo2.png');
+}
+
+#right-sidebar.open-right {
+    background-image: url('fondo_derecha2.png');
+}
+
+/* Contenido principal */
+main {
+    flex: 1;
+    background: #6C90BF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Menús desplegables */
+.toggle-btn {
+    background: #444;
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.menu {
+    width: 90%;
+    display: none;
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: left;
+    position: absolute;
+    top: 60px;
+    left: 5%;
+}
+
+/* Pie de página */
+footer {
+    background: rgb(252, 195, 204);
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Enlaces recomendados en el footer */
+.recommended-links {
+    margin-top: 10px;
+}
+
+.recommended-links a {
+    display: inline-block;
+    margin: 5px 10px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.recommended-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+    }
+}
